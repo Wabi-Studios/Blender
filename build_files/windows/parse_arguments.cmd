@@ -111,6 +111,9 @@ if NOT "%1" == "" (
 	) else if "%1" == "svnfix" (
 		set SVN_FIX=1
 		goto EOF
+	) else if "%1" == "deps" (
+ 		set BUILD_DEPENDENCIES=1
+ 		goto EOF
 	) else (
 		echo Command "%1" unknown, aborting!
 		goto ERR

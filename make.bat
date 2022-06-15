@@ -61,6 +61,11 @@ if "%SVN_FIX%" == "1" (
 	goto EOF
 )
 
+if "%BUILD_DEPENDENCIES%" == "1" (
+   call "%BLENDER_DIR%\build_files\windows\build_deps.cmd"
+   goto EOF
+ )
+
 if "%BUILD_UPDATE%" == "1" (
 	call "%BLENDER_DIR%\build_files\windows\check_libraries.cmd"
 	if errorlevel 1 goto EOF
